@@ -1,4 +1,4 @@
-# FLIX - Android movie app 
+# FLIX - Android Movie App 
 ### Take-home project I completed in a week
 
 ##### Features:
