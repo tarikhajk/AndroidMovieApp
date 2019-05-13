@@ -11,13 +11,13 @@
 - GET request to API only happens if offline cache is empty, otherwise search/filter/data manipulation all done offline
 
 ##### Libraries/tools being used: 
-- RecyclerView: to view the movies as a list
-- Retrofit: to retrieve api results from db
-- Cardview: to display movie poster and name as a tiles
-- Paperdb: NoSQL db to store movie info offline in app
-- Picasso: to place images in imageview
-- Nice Spinner: to display genres
-- used maven{jitpack} for some of these ^
+- [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView): to view the movies as a list
+- [Retrofit](https://github.com/square/retrofit): to retrieve api results from db
+- [CardView](https://developer.android.com/reference/android/support/v7/widget/CardView): to display movie poster and name as a tiles
+- [Paperdb](https://github.com/pilgr/Paper): NoSQL db to store movie info offline in app
+- [Picasso](https://github.com/square/picasso): to place images in imageview
+- [Nice Spinner](https://github.com/arcadefire/nice-spinner): to display genres
+- used maven{ [jitpack](https://jitpack.io/) } to successfully some of these ^
 
 ##### Note on scalability: 
 The offline db that I used is not optimal for scaling up since it pulls out all the data at once rather than being able to pick and choose. I chose it in this project's context because it was the easiest to  learn and implement in the given time.
