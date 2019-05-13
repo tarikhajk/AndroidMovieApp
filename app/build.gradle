@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.outlook.movieappv2"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes.each {
+        it.buildConfigField("String", "THE_MOVIE_DB_API_KEY", TheMovieDBApiKey)
+        it.buildConfigField("String", "RELEASE_DATE_FROM", PRDGte)
+        it.buildConfigField("String", "RELEASE_DATE_TO", PRDLte)
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // nice spinner for genre selection
+    implementation 'com.github.arcadefire:nice-spinner:1.4'
+
+    // recyclerview to view movies as list
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    // cardview to show movie poster and title
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    // diagonal view for movie detail page
+    implementation 'com.github.florent37:diagonallayout:1.0.7'
+
+    // retrofit for fetching api results from movie db
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    // paperdb to store movie details offline
+    implementation 'io.paperdb:paperdb:2.5'
+
+    // picasso for placing images in imageview
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // movie detail feature
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    // movie detail rating progress bar
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+
+    // favorite/like button
+    implementation 'com.github.ivbaranov:materialfavoritebutton:0.1.5'
+}
