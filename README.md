@@ -1,5 +1,5 @@
 # FLIX - Android Movie App 
-#### Take-home project I completed in a week as part of a job interview. The application lays out tiles for movie details fetched from an [TMDb](https://www.themoviedb.org/?language=en-US) using an API key provided by the interviewing company. All calls to API and loading images are asynchronous. Movies are then stored offline in a NoSQL database and retrieved from cache when possible.
+#### Taake-home project I completed in a week as part of a job interview. The application lays out tiles for movie details fetched from an [TMDb](https://www.themoviedb.org/?language=en-US) using an API key provided by the interviewing company. All calls to API and loading images are asynchronous. Movies are then stored offline in a NoSQL database and retrieved from cache when possible.
 
 ##### Features:
 - poster text scrolls when title is too long
